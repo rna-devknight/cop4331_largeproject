@@ -25,7 +25,7 @@ function ResetPassword()
             
             if( res['success_bool'] == false )
             {
-                setMessage('* Unexpect error, please register first.');
+                setMessage('* Unexpected error, please register first.');
             }
             else
             {
@@ -73,12 +73,12 @@ function ResetPassword()
             { showSend ?
 
             showSendEmail ? 
-                <div class='sendEmail'>
+                <form class='sendEmail'>
                     <h1>Email Verification</h1>
-                    <input type='email' class='reset_input' ref={(c) => email = c} placeholder='email'></input><br/>
-                    <h2>{message}</h2><br/><br/><br/>
-                    <button class='btn' id='reset_email_verify_btn' onClick={sendResetEmail}>Send Rest Email</button>
-                </div>
+                    <input type='email' class='reset_input' ref={(c) => email = c} placeholder='email'></input>
+                    <h2>{message}</h2>
+                    <button class='btn' id='resetBtn' onClick={sendResetEmail}>Send Reset Email</button>
+                </form>
                 :
                 <div class='codeVerification'>
                     <h1>Code Verification</h1>

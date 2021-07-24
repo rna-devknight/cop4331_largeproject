@@ -180,7 +180,7 @@ body{
   border-radius: 28px;
   padding: 10px;
   border: 2px solid #292F36;
-  box-shadow: none;
+  box-shadow: 0 3px 15px -3px rgba(0,0,0,0.2);
 }
 
 .login-box h1{
@@ -222,6 +222,125 @@ body{
 }
 
 .signup-box{
-
+  background: white;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  border-radius: 28px;
+  padding: 10px;
+  border: 2px solid #292F36;
+  box-shadow: 0 3px 15px -3px rgba(0,0,0,0.2);
+  margin: auto;
 }
+
+.signup-box input[type = "email"], .signup-box input[type = "text"], .signup-box input[type = "tel"], .signup-box input[type = "password"]{
+  border: 0;
+  background: white;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #d9d9d9;
+  padding: 10px;
+  width: 250px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.24s;
+}
+
+#Cont_btn{
+  border: 0;
+  background: #FFA347;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #d9d9d9;
+  padding: 10px;
+  width: 200px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.24s;
+}
+.signup-box h1{
+  color: #BF4342;
+  font-weight: 480;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.userType-box h1{
+  color: #BF4342;
+  font-weight: 480;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.sendEmail{
+  background: white;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  border-radius: 28px;
+  padding: 10px;
+  border: 2px solid #292F36;
+  box-shadow: 0 3px 15px -3px rgba(0,0,0,0.2);
+  margin: auto;
+}
+
+.sendEmail input[type = "email"]{
+  border: 0;
+  background: white;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #d9d9d9;
+  padding: 10px;
+  width: 250px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.24s;
+}
+
+.sendEmail h1{
+  color: #BF4342;
+  font-weight: 480;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.sendEmail h2{
+  color: #BF4342;
+  font-weight: 480;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+#resetBtn{
+  border: 0;
+  background: #FFA347;
+  display: block;
+  margin: auto;
+  text-align: center;
+  border: 2px solid #d9d9d9;
+  padding: 10px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.24s;
+  font-size: 18px;
+  position: relative;
+}
+
 

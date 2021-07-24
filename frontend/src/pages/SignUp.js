@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 // import Switch from 'react-switch';
 import '../App.css';
+import styled from "styled-components";
+import Modal from '../components/Modal';
+
 
 function SignUp()
 {
@@ -12,6 +15,8 @@ function SignUp()
     const toIndividual = nextChecked => {
         setChecked(nextChecked);
     }
+
+    const [isOpen, setOpen] = useState(false);
 
     const doSignup = async event =>
     {
@@ -52,30 +57,40 @@ function SignUp()
     }
 
     return(
+        
         <div id='signup1_container'>
+            
             <img class='fire' id='small_icon' src='/kindling-icon.png'></img><br/>
             <h1 className='top_title'>Kindling</h1><br/>
 
+            <div>
             <form class="signup-box">
                 <h1>Basic Information</h1>
-                <input type="text" id="singup_displayname" placeholder='displayname' ref={(c) => displayname = c}></input><br/>
-                <input type="tel" id="singup_phonenumber" placeholder='phonenumber' ref={(c) => phonenumber = c}></input><br/>
-                <input type="email" id="singup_email" placeholder='email' ref={(c) => email = c}></input><br/>
-                <input type="password" id="signup_password" placeholder='password' ref={(c) => password = c}></input><br/>
-                <input type="password" id="confirm_password" placeholder='confirm password' ref={(c) => confirm_password = c}></input><br/>
+                <input type="text" id="singup_displayname" placeholder='displayname' ref={(c) => displayname = c}></input>
+                <input type="tel" id="singup_phonenumber" placeholder='phonenumber' ref={(c) => phonenumber = c}></input>
+                <input type="email" id="singup_email" placeholder='email' ref={(c) => email = c}></input>
+                <input type="password" id="signup_password" placeholder='password' ref={(c) => password = c}></input>
+                <input type="password" id="confirm_password" placeholder='confirm password' ref={(c) => confirm_password = c}></input>
+                <button type="button"  id='login_page_bnt' onClick={() => setOpen(true)}> Continue</button>
             </form>
+            <div id="portal-root">
+                    <Modal isOpen={isOpen} close={() => setOpen(false)}>
+                        <form class="userType-box">
+                            <h1>What are you looking for?</h1>
+                            <h2>{checked ? 'Project' : 'Individual'}</h2>
+                            <h3>{checked ? 'Project' : 'Group'}</h3>
+                            {/* <Switch
+                                checked={checked}
+                                onChange={toIndividual}
+                                className='switch_btn'
+                            /><br/> */}
+                            <span>{message}</span>
+                            <button class='bnt' id='Cont_btn' onClick={doSignup}>Sign Up</button><br/>
+                        </form>
+                    </Modal>
+            </div>
+            </div>
             
-            <form class="userType-box">
-            <h1>What are you looking for?</h1>
-                <h2>{checked ? 'Project' : 'Individual'}</h2>
-                {/* <Switch
-                    checked={checked}
-                    onChange={toIndividual}
-                    className='switch_btn'
-                /><br/> */}
-                <span>{message}</span>
-                <button class='bnt' id='signup_bnt' onClick={doSignup}>Sign Up</button><br/>
-            </form>
         </div>
     );
 }
